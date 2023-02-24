@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #light {
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+        }
+        
+        .red {
+            background-color: red;
+        }
+        
+        .green {
+            background-color: green;
+        }
+        
+        .yellow {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="green" id="light"></div>
+
+    <script>
+        function toggle(...actions) {
+            return function(...args) {
+                let action = actions.shift();
+                actions.push(action);
+                return action.call(this, ...args);
+            }
+        }
+        const light = document.querySelector('#light');
+        const controlLight = toggle(() => {
+            light.className = 'yellow'
+        }, () => {
+            light.className = 'red'
+        }, () => {
+            light.className = 'green'
+        })
+        setInterval(() => {
+            controlLight();
+        }, 2000);
+    </script>
+</body>
+
+</html>

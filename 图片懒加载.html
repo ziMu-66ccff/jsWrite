@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            display: block;
+            height: 1000px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <content>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+        <p>66666</p>
+
+        <img data-src="https://i.328888.xyz/2023/02/12/c05fA.jpeg">
+        <img data-src="https://i.328888.xyz/2023/02/12/c05fA.jpeg">
+        <img data-src="https://i.328888.xyz/2023/02/12/c05fA.jpeg">
+        <img data-src="https://i.328888.xyz/2023/02/12/c05fA.jpeg">
+        <img data-src="https://i.328888.xyz/2023/02/12/c05fA.jpeg">
+        <img data-src="https://i.328888.xyz/2023/02/12/c05fA.jpeg">
+        <img data-src="https://i.328888.xyz/2023/02/12/c05fA.jpeg">
+        <img data-src="https://i.328888.xyz/2023/02/12/c05fA.jpeg">
+        <img data-src="https://i.328888.xyz/2023/02/12/c05fA.jpeg">
+        <img data-src="https://i.328888.xyz/2023/02/12/c05fA.jpeg">
+        <img data-src="https://i.328888.xyz/2023/02/12/c05fA.jpeg">
+        <img data-src="https://i.328888.xyz/2023/02/12/c05fA.jpeg">
+        <img data-src="https://i.328888.xyz/2023/02/12/c05fA.jpeg">
+        <img data-src="https://i.328888.xyz/2023/02/12/c05fA.jpeg">
+        <img data-src="https://i.328888.xyz/2023/02/12/c05fA.jpeg">
+        <img data-src="https://i.328888.xyz/2023/02/12/c05fA.jpeg">
+        <img data-src="https://i.328888.xyz/2023/02/12/c05fA.jpeg">
+        <img data-src="https://i.328888.xyz/2023/02/12/c05fA.jpeg">
+        <img data-src="https://i.328888.xyz/2023/02/12/c05fA.jpeg">
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+        <p>9999</p>
+
+    </content>
+    <script>
+        const imgs = document.querySelectorAll('img');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    dataSrc = img.getAttribute('data-src');
+                    img.setAttribute('src', dataSrc);
+                    observer.unobserve(img)
+
+                }
+            })
+
+            console.log('事件被触发');
+        })
+
+        imgs.forEach((img) => {
+            observer.observe(img)
+        })
+
+        // const imgs = document.querySelectorAll('img');
+
+        // window.addEventListener('scroll', () => {
+        //     imgs.forEach((img) => {
+        //         if (img.getBoundingClientRect().top < window.innerHeight) {
+        //             const dataSrc = img.getAttribute('data-src');
+        //             img.setAttribute('src', dataSrc)
+        //         }
+        //     })
+        //     console.log('事件被触发');
+        // })
+    </script>
+</body>
+
+</html>

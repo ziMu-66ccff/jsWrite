@@ -8,3 +8,5 @@ function debounce(fn, dup = 100) {
     }, dup);
   };
 }
+
+// 测试
